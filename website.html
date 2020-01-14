@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<link rel="stylesheet" type="text/css" href="websitestyle.css">
+
+
+<ul>
+  <li><a class="active" href="website.html">LogoPlaceholder</a></li>
+  <li><a href="login.html" class="button">Login</a></li>
+  <li><a href="signup.html"class="button">Sign Up</a></li>
+</ul>
+
+<div class="bg-image"></div>
+
+
+</head>
+<body onload="document.getElementById('active').click()">
+
+	<div class="flex-container">
+  		<h1>LogoPlaceholder</h1>
+  		<h1>A Bakery Inventory Manager</h1>
+	    <h2>As society grows, so does the demand for the amount we consume.<br> Food waste is inevitable.<br> In the UK, we are wasting a third of all the food we produce each year.<br> We aim to provide a service that allows bakers to save waste.<br> This app will save food waste by minimising the food produced while maintaining profits.</h2>
+	</div>
+	<div class="flex-container">
+		<div class="tab">
+		  <button id = "active" class="tablinks" onclick="openInfo(event, 'Features')">Features</button>
+		  <button class="tablinks" onclick="openInfo(event, 'Functionality')">How does it work</button>
+		  <button class="tablinks" onclick="openInfo(event, 'Contact')">Contact Us</button>
+		</div>
+
+		<div id="Features" class="tabcontent">
+			<h1><b><u>What do we offer?</u></b><br></h1>
+			<div class="flex-tabcontent">
+			  <div>
+			  	Maximise Efficiency in Your Bakery<br><br>
+			  	Predict Sale Trends<br><br>
+			  	Decrease Amount of Wasted Product<br><br>
+			    Be Easily Customised to Your Needs
+			  </div>
+
+			</div>
+		</div>
+
+		<div id="Functionality" class="tabcontent">
+			<div class="flex-tabcontent">
+				<div class="box1">
+					<h1>Calculate Required Ingredients</h1>
+					<h2>	With the use of algorithms, the program will use your data to calculate required amount of ingredients needed for the following week.<br>	
+				</div>
+				<div class="box1">
+					<h1>Predict Sales Trend</h1>
+					<h2>The program will utilise your data to observe and notify you of probable sale trends<br>
+					As a result, you will be given crucial data to aid you in the success of your business
+					</h2>
+				</div>
+			</div>
+			<div class="box3">
+			<h1>
+			Be Easily Personalised
+			</h1>
+			<h2>
+			As a website, we understand that people think differently. As a solution, we allow you to customise your experience to maximise your productivity. We offer a range of options to tend to your needs.
+			</h2>
+			</div>
+		</div>
+
+		<div id="Contact" class="tabcontent">
+		  <h3>Please get in touch if you have any concerns</h3>
+		  <p>Email: jhunethan23@gmail.com</p>
+		</div>
+
+		<script>
+			function openInfo(event, tabName) {
+			  var i, tabcontent, tablinks;
+			  tabcontent = document.getElementsByClassName("tabcontent");
+			  for (i = 0; i < tabcontent.length; i++) {
+			    tabcontent[i].style.display = "none";
+			  }
+			  tablinks = document.getElementsByClassName("tablinks");
+			  for (i = 0; i < tablinks.length; i++) {
+			    tablinks[i].className = tablinks[i].className.replace(" active", "");
+			  }
+			  document.getElementById(tabName).style.display = "block";
+			  event.currentTarget.className += " active";
+			}
+			
+			function openInfo2(event, tabNo) {
+				var i, tabcontent, tablinks;
+					tabcontent = document.getElementsByClassName("tabcontent2")
+				for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				}
+				tablinks = document.getElementsByClassName("tablinks2");
+				for (i = 0; i < tablinks.length; i++) {
+					tablinks[i].className = tablinks[i].className.replace(" active", "");
+				}
+				document.getElementById(tabName).style.display = "block";
+				event.currentTarget.className += " active";				
+			}
+			
+		</script>
+	</div>
+</body>
+</html>
